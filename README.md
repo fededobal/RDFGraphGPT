@@ -11,4 +11,5 @@ _This project extends the [Graph GPT project](https://github.com/varunshenoy/Gra
 1. _Run npm install to download required dependencies._
 2. _Do the same standing in the "serv" folder._
 3. _Make sure you have an [OpenAI API key](https://platform.openai.com/account/api-keys). You will enter this into the web app when running queries._
-4. _Run npm run start. RDFGraphGPT should open up in a new browser tab._
+4. _Run node index.js standing in the "serv" folder, your server should be runing now._
+5. _Run npm run start. RDFGraphGPT should open up in a new browser tab._
