@@ -6,7 +6,7 @@ _This project extends the [Graph GPT project](https://github.com/varunshenoy/Gra
 * The RDF archive will be saved in the location you choose, either in a new one or an existent one.
 ## Other Functionalities
 * You can improve the IRIs that chat GPT used by clicking the "Improve RDF" button and inserting the IRIs you want to change and the ones you would want to use. To do this we use another propmt to send it to the API.
-* You can edit the RDF code by hand and save it in your archive by clicking the "Edit RDF code" button.
+* You can edit the RDF code by hand and save it in your archive by clicking the "Edit the rdf code" button.
 ## SetUp
 1. _Run npm install to download required dependencies._
 2. _Do the same standing in the "serv" folder._
