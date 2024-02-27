@@ -1,5 +1,5 @@
 # RDFGraphGPT
-This project extends the Graph GPT project (https://github.com/varunshenoy/GraphGPT) with different approaches in the type of output and the interaction with the originated graph. 
+_This project extends the [Graph GPT project](https://github.com/varunshenoy/GraphGPT) with different approaches in the type of output and the interaction with the originated graph._
 # Natural Language -> RDF -> Graph
 ## Main functionality
 * The way this project works is that you insert any kind of natural language text, in the background we send it to Open AI API with an specific prompt so it turns it to an RDF turtle format, and then it will be graphed using either Graphviz or Cytoscape, you can choose!
