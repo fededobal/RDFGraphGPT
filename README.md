@@ -5,8 +5,8 @@ _This project extends the [Graph GPT project](https://github.com/varunshenoy/Gra
 * The way this project works is that you insert any kind of natural language text, in the background we send it to Open AI API with an specific prompt so it turns it to an RDF turtle format, and then it will be graphed using either Graphviz or Cytoscape, you can choose!
 * The RDF archive will be saved in the location you choose, either in a new one or an existent one.
 ## Other Functionalities
-* You can improve the IRIs that chat GPT used by inserting the IRIs you want to change and the ones you would want to use.
-* You can edit the RDF code that chat GPT creates and save it in your archive.
+* You can improve the IRIs that chat GPT used by clicking the "Improve RDF" button and inserting the IRIs you want to change and the ones you would want to use. To do this we use another propmt to send it to the API.
+* You can edit the RDF code by hand and save it in your archive by clicking the "Edit RDF code" button.
 ## SetUp
 1. _Run npm install to download required dependencies._
 2. _Do the same standing in the "serv" folder._
