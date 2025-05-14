@@ -12,5 +12,5 @@ _This project extends the [Graph GPT project](https://github.com/varunshenoy/Gra
 1. _Once you cloned this project, make sure you are on the "main" branch._
 2. _Standing on "pruebas_gpt4" folder run `poetry install`. This should install all the dependencies._
 3. _Make sure you have an [OpenAI API key](https://platform.openai.com/account/api-keys). You need it to interact with the GPT API._
-4. _Create a .env file in "pruebas_gpt4" folder and declare this enviroment variable: `OPENAI_API_KEY=<the value of the API key you obtained>`._
+4. _Create a .env file in "pruebas_gpt4" folder and declare this enviroment variable: `OPENAI_API_KEY='<the value of the API key you obtained>'`._
 5. _Standing on "pruebas_gpt4" folder run `poetry shell` and then `flask --app index run`. Now RDFGraphGPT is running on ypur computer 🎊._
