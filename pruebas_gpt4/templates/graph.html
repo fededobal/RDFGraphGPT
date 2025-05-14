@@ -1,0 +1,56 @@
+{% extends "basic.html" %}
+{% block title %}Grafo RDF{% endblock %}
+{% block scripts%}
+  {{ super() }}
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+      // Cargar el SVG y agregar zoom y desplazamiento
+      d3.xml("/../static/archivo.svg").then(function(xml) {
+          let svgNode = xml.documentElement;
+          document.getElementById('svg-container').appendChild(svgNode);
+
+          // Configurar el zoom y el desplazamiento
+          let svg = d3.select(svgNode);
+          let g = svg.select('g');
+
+          let zoom = d3.zoom()
+              .on("zoom", function(event) {
+                  g.attr("transform", event.transform);
+              });
+
+          svg.call(zoom);
+      }).catch(function(error) {
+          console.error("Error loading SVG: ", error);
+      });
+  </script>
+  <style>
+
+    #svg-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        height: 400%; /* Establece la altura al 300% de su contenedor padre */
+        border: 1px solid #ccc; /* Opcional, solo para visualización */
+    }
+
+    svg {
+        max-width: 100%;
+        width: auto;
+        max-height: 100%;
+    }
+  </style>
+{% endblock %}
+{% block content %}
+    {% block content_2 %}
+    <h1 class="fw-light">🕸️ Este es tu grafo RDF 🕸️</h1>
+    <p class="fst-italic">Fue generado a partir del texto en lenguaje natural que ingresaste.</p>
+    {% endblock %}
+    <div class='container-lg'>
+        {% if graph %}
+            <div id="svg-container" style=""></div>
+        {% else %}
+            <div id="graph"></div>
+        {% endif %}
+    </div>
+{% endblock %}

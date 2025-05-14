@@ -1,0 +1,39 @@
+{% extends "basic.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="container-sm">
+        <h1 class="fw-light">🕸️ RDFGraphGPT 🕸️</h1>
+        {% block content_2 %}
+        <h2 class="fw-light">Genera un nuevo RDF</h2>
+        <p class="fst-italic">Transformá textos en lenguaje natural a tripletas RDF y construí complejos grafos dirigidos. Este software es resultado de una investigacion en el centro LIFIA, Facultad de Informática, UNLP.</p>
+        {% endblock %}
+        <p class="fst-italic"><a href="https://github.com/varunshenoy/graphgpt">GraphGPT is open-source</a>&nbsp;🎉</p>
+        {% block form_action %}
+        <form action="/" method="post">
+        {% endblock %}
+        <label for="place" class="fw-normal">Dónde queres guardar tu rdf?</label>
+    {% block guardado %}
+        <div>
+            <div class="input-group mb-3">
+                <input type="text" name="file-name" id="file-name" class="form-control" placeholder="File name" aria-label="File name" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">.ttl</span>
+            </div>
+        </div>
+    {% endblock %}
+        <div class="input-group">
+            <span class="input-group-text">Describe tu grafo</span>
+            <textarea name="text" id="text" rows="10" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <label for="api-key" class="form-label"></label>
+        <!--<div class="input-group">
+            <span class="input-group-text" id="basic-addon3">OpenAI API key:</span>
+            <input type="text" name="api-key" class="form-control" id="api-key" aria-describedby="basic-addon3 basic-addon4">
+        </div> -->
+        <br/>   
+        <div class="d-grid gap-2">
+          <button class="btn btn-light" type="submit" style="background-color:#7FB3D5; ">Generar grafo</button>
+        </div>
+      </form>
+    </div>
+{% endblock %}

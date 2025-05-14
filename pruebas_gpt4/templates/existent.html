@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block title %}Extender RDF{% endblock %}
+{% block form_action %}
+<form action="/existent" method="post">
+{% endblock %}
+{% block guardado%}
+<select class="form-select" name="file-name" for="file-name" id="file-name" aria-label="Default select example">
+    <option selected>Elija el archivo a extender</option>
+    {% for file in files %}
+    <option for="file-name" value="{{file}}">{{file}}</option>
+    {% endfor %}
+  </select>
+<br>
+{% endblock %}
+{% block content_2 %}
+    <h2 class="fw-light">Extender RDF</h2>
+    <p class="fst-italic">Selecciona un RDF existente .ttl que quieras extender</p>
+{% endblock %}

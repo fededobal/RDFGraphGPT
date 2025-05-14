@@ -1,0 +1,28 @@
+{% extends "basic.html" %}
+{% block title %}Edicion{% endblock %}
+{% block content %}
+    <h1>You can edit this rdf so we can graph it: </h1>
+
+    {% if error %}
+      <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+        Hubo un problema al crear el grafo. Por favor, verifica que la API key sea correcta y que el texto sea válido. Mensaje: {{ error }}
+      </div>
+      <br>
+    {% endif %}
+
+    <form action="/save-rdf" method="post">
+        <div class="input-group mb-3">
+            <label for="file-name" class="input-group-text">Nombre del archivo que quiere editar</label>
+            <input type="text" name="file-name" id="file-name" class="form-control" placeholder="File name" aria-label="File name" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">.rdf</span>
+        </div>
+        <div class="input-group">
+            <textarea class="form-control" name="rdf-text" id="rdf-text" rows="25" >{{rdf_text}}</textarea>
+            <label for="rdf-text"></label>
+        </div>
+        <br>
+        <div class="d-grid gap-2">
+          <button class="btn btn-light" type="submit" style="background-color:#7FB3D5; ">Editar</button>
+        </div>
+    </form>
+{% endblock %}

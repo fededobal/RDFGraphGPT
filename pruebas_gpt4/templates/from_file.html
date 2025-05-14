@@ -1,0 +1,23 @@
+{% extends "graph.html" %}
+{% block title %}Graficar archivo RDF{% endblock %}
+{% block content_2 %}
+    <h1 class="fw-light">🕸️ RDFGraphGPT 🕸️</h1>
+    <h2 class="fw-light">Grafica tu RDF</h2>
+    <p class="fst-italic">Selecciona un archivo .ttl existente</p>
+
+    <form action="{{url_for('graph_from_file')}}" method="post" enctype="multipart/form-data">
+        <select class="form-select" name="file-name" for="file-name" id="file-name" aria-label="Default select example">
+        {% for file in files %}
+            <option for="file-name" value="{{file}}">{{file}}</option>
+        {% endfor %}
+        </select>
+        <br>
+        <!--<div class="mb-3">
+            <input class="form-control" type="file" name="file" id="file" accept=".ttl">
+        </div>-->
+        <div class="d-grid gap-2">
+            <button class="btn btn-light" type="submit" style="background-color:#7FB3D5; ">Generar grafo</button>
+        </div>
+        <br>
+    </form>
+{% endblock %}

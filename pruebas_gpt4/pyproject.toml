@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pruebas-gpt4"
+version = "0.1.0"
+description = ""
+authors = ["Juana Borrelli Zara <jborrellizara@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai = "^1.24.0"
+jinja2 = "^3.1.4"
+fs = "^2.4.16"
+flask = "^3.0.3"
+rdflib = "^7.1.4"
+pygraphviz = "^1.14"
+python-dotenv = "^1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
