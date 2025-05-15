@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, url_for
-from pruebas_gpt4 import generate_graph, generate_graph_having_rdf, search_file, get_files_in_directory
-from pruebas_gpt4 import graph_from_file as gff
+from RDFGraphGPT import generate_graph, generate_graph_having_rdf, search_file, get_files_in_directory
+from RDFGraphGPT import graph_from_file as gff
 import os
 
 app = Flask(__name__)
